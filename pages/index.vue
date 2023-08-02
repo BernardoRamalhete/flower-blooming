@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper" @scroll="handleScroll">
         <div class="background-image">
-            <img class="image" :src="`/_nuxt/assets/images/${currentImage}`" alt=""/>
+            <img class="image" :src="`/images/${currentImage}`" alt=""/>
         </div>
 
         <div class="bottom-info">
