@@ -1,7 +1,9 @@
 <template>
     <div class="wrapper" @scroll="handleScroll">
         <div class="background-image">
-            <img class="image" :src="`/images/${currentImage}`" alt=""/>
+            <figure class="figure">
+                <img class="image" :src="`/images/${currentImage}`" alt=""/>
+            </figure>
         </div>
 
         <div class="bottom-info">
@@ -61,16 +63,36 @@ function updateBackgroundImage() {
     .background-image {
         position: fixed;
         inset: 0;
+        background-color: $pure_black;
         &:before {
             content: '';
             position: absolute;
             inset: 0;
+            z-index: 1;
             backdrop-filter: grayscale(100%) brightness(60%) contrast(105%);
         }
-        .image {
+
+        .figure {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            @media(max-width: 1030px) {
+            }
+            .image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                @media(max-width: 1030px) {
+                    height: 780px;
+                    position: absolute;
+                    bottom: 0;
+                }
+                @media(max-width: 680px) {
+                    height: 580px;
+                }
+                @media(max-width: 420px) {
+                    height: 440px;
+                }
+            }
         }
     }
 
