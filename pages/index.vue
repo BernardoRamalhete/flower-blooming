@@ -6,6 +6,119 @@
             </figure>
         </div>
 
+        <main class="text-wrapper">
+            <h1>
+                Blooming in the Infinite Cosmos: <br/>
+                Embracing our Fleeting Brilliance
+            </h1>
+
+            <p>
+                In the vast expanse of time and space, we humans are but fleeting sparks in the cosmic dance. Like flowers blooming for a short while, we grace the world with our presence before gently fading away.
+            </p>
+
+            <p>
+                Our lives, a delicate interlude between eternity and oblivion, seem insignificant when compared to the majesty of the universe. Yet, within this humbling realization, lies the beauty of our existence.
+            </p>
+
+            <p>
+                We are a way for the cosmos to know itself.
+                <small>Carl Sagan</small>
+            </p>
+
+            <p>
+                We may be minuscule in the grand scheme of the universe, but we possess the unique capacity for introspection, creativity, and compassion. 
+            </p>
+
+            <p>
+                Within each of us lies a universe of thoughts and emotions, and our consciousness allows us to marvel at the very cosmos that birthed us.  
+            </p>
+
+            <p>
+                It is this ephemeral gift of consciousness that elevates our brief existence to something infinitely profound.
+            </p>
+
+            <p>
+                Just as a flower blooms with vibrant hues, our lives burst forth with moments of joy, love, and growth. We may be transient beings, but our impact can be everlasting. 
+            </p>
+
+            <p>
+                Our actions can ripple through time, shaping the lives of others and leaving an indelible mark on the fabric of the universe.
+            </p>
+
+            <p>
+                You are not a drop in the ocean. You are the entire ocean in a drop.
+                <small>
+                    Rumi
+                </small>
+            </p>
+
+            <p>
+                Our lives are intertwined, weaving a tapestry of stories and experiences that span the ages.
+            </p>
+
+            <p>
+                Just as flowers wither and fall, we too experience loss and the inevitable passage of time. It is in these moments of impermanence that we can find strength and resilience.  
+            </p>
+
+            <p>
+                Just as the flowers trust in the return of spring, we can embrace the cycle of life and death with hope and faith in the continuation of our essence.
+            </p>
+
+            <p>
+                For life and death are one, even as the river and the sea are one.
+                <small>
+                    Khalil GIbran
+                </small>
+            </p>
+
+            <p>
+                Our journey does not end with the wilting of our bodies; it transcends to become part of the universal fabric. 
+            </p>
+
+            <p>
+                Like seeds carried by the wind, our energy dissipates and merges with the cosmos, awaiting the next season of existence.
+            </p>
+
+            <p>
+                Embracing our brief existence in the vastness of the universe, we must not despair at our seeming insignificance. Instead, we should savor each fleeting moment, allowing our lives to unfold like petals in the gentle breeze.
+            </p>
+
+            <p>
+                Live in each season as it passes; breathe the air, drink the drink, taste the fruit, and resign yourself to the influence of the earth.
+                <small>
+                    Henry David Thoreau
+                </small>
+            </p>
+
+            <p>
+                Just as flowers must bloom and fade to make way for new blossoms, so too must we cherish our existence while nurturing the seeds of the future. Our actions today lay the foundation for generations to come.
+            </p>
+
+            <p>
+                Each of us has the potential to create ripples that echo throughout eternity.
+            </p>
+
+            <p>
+                In the grand symphony of existence, let us not lament the brevity of our presence but celebrate the brilliance of our being. Like the flowers that bloom and wither, we too have the power to touch lives, to inspire, and to create beauty. 
+            </p>
+
+            <p>
+                Our lives may be brief, but the impact we leave can be everlasting.
+            </p>
+
+            <p>
+                So, let us embrace the cosmic dance with open arms, knowing that our brief existence is a gift, a chance to witness the universe through our unique lenses. 
+            </p>
+
+            <p>
+                We may be small in the face of the infinite, but our spirits can soar to heights unknown.
+            </p>
+
+            <p>
+                Like flowers reborn with each season, our legacy will live on, intertwined with the universe, forever blooming in the eternal garden of time.
+            </p>
+        </main>
+
         <div class="bottom-info">
             <span class="bottom-text">{{ hasStartScrolling ? 'Read time 2 min' : 'Scroll to explore' }}</span>
             <svg v-if="hasStartScrolling" class="circle-completion" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -97,6 +210,13 @@ function updateBackgroundImage() {
         }
     }
 
+    .text-wrapper {
+        padding: 28px;
+        position: relative;
+        color: $pure_white;
+        z-index: 2;
+    }
+
     .bottom-info {
         position: fixed;
         bottom: 32px;
@@ -105,7 +225,7 @@ function updateBackgroundImage() {
         padding: 8px;
         border-radius: 8px;
         border: 1px solid rgba($pure_white, 0.4);
-        opacity: 0.6;
+        opacity: 0.8;
 
         .bottom-text {
             font-size: 14px;
