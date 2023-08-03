@@ -81,6 +81,7 @@ function updateBackgroundImage() {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                opacity: 0.6;
                 @media(max-width: 1030px) {
                     height: 780px;
                     position: absolute;
