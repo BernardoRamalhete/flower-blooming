@@ -147,7 +147,7 @@ const hasStartScrolling = ref(false)
 const currentImage = computed(() => {
     return `ezgif-frame-${currentImageIndex.value}.jpg`
 })
-const currentImageIndex = ref('001')
+const currentImageIndex = ref('136')
 
 const readCompletionFill = ref(62.5)
 function updateBackgroundImage() {
@@ -188,23 +188,26 @@ function updateBackgroundImage() {
         .figure {
             height: 100%;
             width: 100%;
-            @media(max-width: 1030px) {
-            }
+            position: absolute;
+            bottom: 0;
             .image {
-                height: 100%;
+                height: 90%;
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 opacity: 0.6;
-                @media(max-width: 1030px) {
-                    height: 780px;
-                    position: absolute;
-                    bottom: 0;
+                position: absolute;
+                bottom: 0;
+                @media(min-height: 1000px) {
+                    height: 100%;
+                    object-fit: cover;
                 }
-                @media(max-width: 680px) {
-                    height: 580px;
+                @media(max-width: 830px) {
+                    
+                    height: 70%;
+                    object-fit: cover;
                 }
                 @media(max-width: 420px) {
-                    height: 440px;
+                    height: 50%;
                 }
             }
         }
