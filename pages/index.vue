@@ -8,111 +8,125 @@
 
         <main class="text-wrapper">
             <h1>
-                Blooming in the Infinite Cosmos: <br/>
-                Embracing our Fleeting Brilliance
+                Bloom brightly in the Infinite Cosmos <br/>
+                Embrace your brilliance
             </h1>
 
-            <p>
-                In the vast expanse of time and space, we humans are but fleeting sparks in the cosmic dance. Like flowers blooming for a short while, we grace the world with our presence before gently fading away.
-            </p>
+            <span>
+                <p>
+                    In the vast expanse of time and space, we humans are but fleeting sparks in the cosmic dance. Like flowers blooming for a short while, we grace the world with our presence before gently fading away.
+                </p>
+    
+                <p>
+                    Our lives, a delicate interlude between eternity and oblivion, seem insignificant when compared<br/> to the majesty of the universe. Yet, within this humbling realization, lies the beauty of our existence.
+                </p>
+            </span>
 
-            <p>
-                Our lives, a delicate interlude between eternity and oblivion, seem insignificant when compared to the majesty of the universe. Yet, within this humbling realization, lies the beauty of our existence.
-            </p>
-
-            <p>
-                We are a way for the cosmos to know itself.
+            <p class="quote">
+                We are a way for the cosmos<br/> to know itself.
                 <small>Carl Sagan</small>
             </p>
 
-            <p>
-                We may be minuscule in the grand scheme of the universe, but we possess the unique capacity for introspection, creativity, and compassion. 
-            </p>
+            <span>
+                <p>
+                    We may be minuscule in the grand scheme of the universe, but we possess the unique capacity for introspection, creativity, and compassion. 
+                </p>
+    
+                <p>
+                    Within each of us lies a universe of thoughts and emotions, and our consciousness allows us to marvel at the very cosmos that birthed us.  
+                </p>
+    
+                <p>
+                    It is this ephemeral gift of consciousness that elevates our brief existence to something infinitely profound.
+                </p>
+            </span>
 
-            <p>
-                Within each of us lies a universe of thoughts and emotions, and our consciousness allows us to marvel at the very cosmos that birthed us.  
-            </p>
+            <span>
+                <p>
+                    Just as a flower blooms with vibrant hues, our lives burst forth with moments of joy, love, and growth. We may be transient beings, but our impact can be everlasting. 
+                </p>
+    
+                <p>
+                    Our actions can ripple through time, shaping the lives of others and leaving an indelible mark on the fabric of the universe.
+                </p>
+            </span>
 
-            <p>
-                It is this ephemeral gift of consciousness that elevates our brief existence to something infinitely profound.
-            </p>
-
-            <p>
-                Just as a flower blooms with vibrant hues, our lives burst forth with moments of joy, love, and growth. We may be transient beings, but our impact can be everlasting. 
-            </p>
-
-            <p>
-                Our actions can ripple through time, shaping the lives of others and leaving an indelible mark on the fabric of the universe.
-            </p>
-
-            <p>
+            <p class="quote">
                 You are not a drop in the ocean. You are the entire ocean in a drop.
                 <small>
                     Rumi
                 </small>
             </p>
 
-            <p>
-                Our lives are intertwined, weaving a tapestry of stories and experiences that span the ages.
-            </p>
+            <span>
+                <p>
+                    Our lives are intertwined, weaving a tapestry of stories and experiences that span the ages.
+                </p>
+    
+                <p>
+                    Just as flowers wither and fall, we too experience loss and the inevitable passage of time. It is in these moments of impermanence that we can find strength and resilience.  
+                </p>
+    
+                <p>
+                    Just as the flowers trust in the return of spring, we can embrace the cycle of life and death with hope and faith in the continuation of our essence.
+                </p>
+            </span>
 
-            <p>
-                Just as flowers wither and fall, we too experience loss and the inevitable passage of time. It is in these moments of impermanence that we can find strength and resilience.  
-            </p>
-
-            <p>
-                Just as the flowers trust in the return of spring, we can embrace the cycle of life and death with hope and faith in the continuation of our essence.
-            </p>
-
-            <p>
+            <p class="quote">
                 For life and death are one, even as the river and the sea are one.
                 <small>
                     Khalil GIbran
                 </small>
             </p>
 
-            <p>
-                Our journey does not end with the wilting of our bodies; it transcends to become part of the universal fabric. 
-            </p>
+            <span>
+                <p>
+                    Our journey does not end with the wilting of our bodies; it transcends to become part of the universal fabric. 
+                </p>
+    
+                <p>
+                    Like seeds carried by the wind, our energy dissipates and merges with the cosmos, awaiting the next season of existence.
+                </p>
+    
+                <p>
+                    Embracing our brief existence in the vastness of the universe, we must not despair at our seeming insignificance. Instead, we should savor each fleeting moment, allowing our lives to unfold like petals in the gentle breeze.
+                </p>
+            </span>
 
-            <p>
-                Like seeds carried by the wind, our energy dissipates and merges with the cosmos, awaiting the next season of existence.
-            </p>
-
-            <p>
-                Embracing our brief existence in the vastness of the universe, we must not despair at our seeming insignificance. Instead, we should savor each fleeting moment, allowing our lives to unfold like petals in the gentle breeze.
-            </p>
-
-            <p>
+            <p class="quote">
                 Live in each season as it passes; breathe the air, drink the drink, taste the fruit, and resign yourself to the influence of the earth.
                 <small>
                     Henry David Thoreau
                 </small>
             </p>
 
-            <p>
-                Just as flowers must bloom and fade to make way for new blossoms, so too must we cherish our existence while nurturing the seeds of the future. Our actions today lay the foundation for generations to come.
-            </p>
+            <span>
+                <p>
+                    Just as flowers must bloom and fade to make way for new blossoms, so too must we cherish our existence while nurturing the seeds of the future. Our actions today lay the foundation for generations to come.
+                </p>
+    
+                <p>
+                    Each of us has the potential to create ripples that echo throughout eternity.
+                </p>
+    
+                <p>
+                    In the grand symphony of existence, let us not lament the brevity of our presence but celebrate the brilliance of our being. Like the flowers that bloom and wither, we too have the power to touch lives, to inspire, and to create beauty. 
+                </p>
+            </span>
 
-            <p>
-                Each of us has the potential to create ripples that echo throughout eternity.
-            </p>
-
-            <p>
-                In the grand symphony of existence, let us not lament the brevity of our presence but celebrate the brilliance of our being. Like the flowers that bloom and wither, we too have the power to touch lives, to inspire, and to create beauty. 
-            </p>
-
-            <p>
-                Our lives may be brief, but the impact we leave can be everlasting.
-            </p>
-
-            <p>
-                So, let us embrace the cosmic dance with open arms, knowing that our brief existence is a gift, a chance to witness the universe through our unique lenses. 
-            </p>
-
-            <p>
-                We may be small in the face of the infinite, but our spirits can soar to heights unknown.
-            </p>
+            <span>
+                <p>
+                    Our lives may be brief, but the impact we leave can be everlasting.
+                </p>
+    
+                <p>
+                    So, let us embrace the cosmic dance with open arms, knowing that our brief existence is a gift, a chance to witness the universe through our unique lenses. 
+                </p>
+    
+                <p>
+                    We may be small in the face of the infinite, but our spirits can soar to heights unknown.
+                </p>
+            </span>
 
             <p>
                 Like flowers reborn with each season, our legacy will live on, intertwined with the universe, forever blooming in the eternal garden of time.
@@ -147,7 +161,7 @@ const hasStartScrolling = ref(false)
 const currentImage = computed(() => {
     return `ezgif-frame-${currentImageIndex.value}.jpg`
 })
-const currentImageIndex = ref('136')
+const currentImageIndex = ref('001')
 
 const readCompletionFill = ref(62.5)
 function updateBackgroundImage() {
@@ -172,7 +186,8 @@ function updateBackgroundImage() {
 
 <style lang="scss" scoped>
 .wrapper {
-    height: 8900px;
+    // height: 10000px;
+    padding-bottom: 200px;
     .background-image {
         position: fixed;
         inset: 0;
@@ -182,7 +197,7 @@ function updateBackgroundImage() {
             position: absolute;
             inset: 0;
             z-index: 1;
-            backdrop-filter: grayscale(100%) brightness(60%) contrast(105%);
+            backdrop-filter: grayscale(100%) brightness(60%) contrast(105%) sepia(30%);
         }
 
         .figure {
@@ -194,7 +209,7 @@ function updateBackgroundImage() {
                 height: 90%;
                 width: 100%;
                 object-fit: contain;
-                opacity: 0.6;
+                opacity: 0.5;
                 position: absolute;
                 bottom: 0;
                 @media(min-height: 1000px) {
@@ -214,10 +229,118 @@ function updateBackgroundImage() {
     }
 
     .text-wrapper {
-        padding: 28px;
+        height: 100%;
+        overflow: hidden;
+        margin: 28px 108px;
         position: relative;
-        color: $pure_white;
+        color: $text_color;
         z-index: 2;
+        position: relative;
+        @media(max-width: 420px) {
+            margin: 12px 20px;
+        }
+
+        &:before, &:after {
+            content: '';
+            position: fixed;
+            margin-inline: -108px;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background-image: linear-gradient(0deg, #000, 50%, transparent);
+            filter: grayscale(100%);
+            
+            @media(max-width: 420px) {
+                margin-inline: -20px;
+            }
+        }
+        
+        &:after {
+            bottom: unset;
+            top: 0;
+            background-image: linear-gradient(180deg, #000, 50%, transparent);
+        }
+
+        h1 {
+            height: 100vh;
+            height: 100dvh;
+            text-align: center;
+            display: grid;
+            place-items: center;
+            font-weight: 500;
+            font-size: 48px;
+            @media(max-width: 420px) {
+                font-size: 24px;
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        & > span {
+            height: 105vh;
+            height: 105dvh;
+            display: block;
+        }
+        
+        & > p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center !important;
+            max-width: unset !important;
+            font-weight: 500;
+            font-size: 40px !important;
+            height: 100vh;
+            height: 100dvh;
+            margin-bottom: 0 !important;
+            @media(max-width: 420px) {
+                font-size: 20px !important;
+            }
+        }
+
+        p {
+            font-size: 36px;
+            @media(max-width: 420px) {
+                font-size: 16px;
+            }
+
+            &:nth-child(odd) {
+                max-width: 880px;
+                margin-bottom: 120px;
+            }
+            
+            &:nth-child(even) {
+                text-align: right;
+                margin-left: auto;
+                max-width: 880px;
+                margin-bottom: 120px;
+            }
+
+            &.quote {
+                margin: auto;
+                height: 105vh;
+                height: 105dvh;
+                font-weight: 500;
+                font-size: 48px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                @media(max-width: 420px) {
+                    font-size: 20px;
+                }
+                small {
+                    font-weight: 400;
+                    font-size: 32px;
+                    display: block;
+                    @media(max-width: 420px) {
+                        font-size: 14px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
     }
 
     .bottom-info {
@@ -229,6 +352,7 @@ function updateBackgroundImage() {
         border-radius: 8px;
         border: 1px solid rgba($pure_white, 0.4);
         opacity: 0.8;
+        z-index: 3;
 
         .bottom-text {
             font-size: 14px;
