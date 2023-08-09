@@ -140,7 +140,7 @@
                         Read time
                     </span>
                     <span>
-                        2 min
+                        3 min
                     </span>
                 </span>
                 <span v-else>
