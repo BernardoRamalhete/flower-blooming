@@ -159,6 +159,22 @@
 </template>
 
 <script setup>
+useHead({
+    title: 'Bloom brightly in the Infinite Cosmos',
+    meta: [
+        { name: 'description', content: 'Discover the profound beauty of embracing your brilliance amidst the vast cosmos. Explore the poetic journey of our fleeting existence, drawing inspiration from blooming flowers and the infinite universe.' }
+    ],
+    link: [
+        { rel: 'icon', href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🌸</text></svg>' }
+    ]
+})
+
+useSeoMeta({
+  title: 'Bloom brightly in the Infinite Cosmos',
+  ogTitle: 'Bloom brightly in the Infinite Cosmos',
+  description: 'Discover the profound beauty of embracing your brilliance amidst the vast cosmos. Explore the poetic journey of our fleeting existence, drawing inspiration from blooming flowers and the infinite universe.',
+  ogDescription: 'Discover the profound beauty of embracing your brilliance amidst the vast cosmos. Explore the poetic journey of our fleeting existence, drawing inspiration from blooming flowers and the infinite universe.'
+})
 
 onMounted(() => {
     window.addEventListener('scroll', updateBackgroundImage)
