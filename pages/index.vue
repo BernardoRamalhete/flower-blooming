@@ -134,7 +134,19 @@
         </main>
 
         <div class="bottom-info">
-            <span class="bottom-text">{{ hasStartScrolling ? 'Read time 2 min' : 'Scroll to explore' }}</span>
+            <span class="bottom-text">
+                <span v-if="hasStartScrolling">
+                    <span class="faded">
+                        Read time
+                    </span>
+                    <span>
+                        2 min
+                    </span>
+                </span>
+                <span v-else>
+                    Scroll to explore
+                </span>
+            </span>
             <svg v-if="hasStartScrolling" class="circle-completion" width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <circle opacity="0.2" cx="11" cy="11" r="10" stroke="white"></circle>
                 <circle class="circle-completion-fill" opacity="1" cx="11" cy="11" r="10" stroke="white"></circle>
@@ -150,6 +162,7 @@
 
 onMounted(() => {
     window.addEventListener('scroll', updateBackgroundImage)
+    scrollingElement.value = document.querySelector('#__nuxt')
 })
 
 onBeforeUnmount(() => {
@@ -164,10 +177,13 @@ const currentImage = computed(() => {
 const currentImageIndex = ref('001')
 
 const readCompletionFill = ref(62.5)
+
+const scrollingElement = ref(null)
 function updateBackgroundImage() {
     hasStartScrolling.value = window.pageYOffset > 0
+    const scrollPercentage = Math.floor(100 * document.documentElement.scrollTop / (scrollingElement.value.scrollHeight - document.documentElement.clientHeight))
 
-    let relativeScrollPosition = Math.ceil(window.pageYOffset / 58) + 1
+    let relativeScrollPosition = Math.ceil(100 * scrollPercentage / 136) + 1
     
     if(relativeScrollPosition > 136) {
         currentImageIndex.value = 136
@@ -179,8 +195,7 @@ function updateBackgroundImage() {
 
     currentImageIndex.value = relativeScrollPosition
 
-    const scrollPercentage = 1.36 * (Number(relativeScrollPosition) - 1)
-    readCompletionFill.value = 62.5 - 0.34 * scrollPercentage
+    readCompletionFill.value = (0.63 * scrollPercentage) - 63
 }
 </script>
 
@@ -247,7 +262,7 @@ function updateBackgroundImage() {
             bottom: 0;
             width: 100%;
             height: 40%;
-            background-image: linear-gradient(0deg, #000, 50%, transparent);
+            background-image: linear-gradient(0deg, $pure_black, 50%, transparent);
             filter: grayscale(100%);
             
             @media(max-width: 420px) {
@@ -258,7 +273,7 @@ function updateBackgroundImage() {
         &:after {
             bottom: unset;
             top: 0;
-            background-image: linear-gradient(180deg, #000, 50%, transparent);
+            background-image: linear-gradient(180deg, $pure_black, 50%, transparent);
         }
 
         h1 {
@@ -348,7 +363,7 @@ function updateBackgroundImage() {
         bottom: 32px;
         right: 32px;
         color: $pure_white;
-        padding: 8px;
+        padding: 12px 16px;
         border-radius: 8px;
         border: 1px solid rgba($pure_white, 0.4);
         opacity: 0.8;
@@ -357,6 +372,9 @@ function updateBackgroundImage() {
         .bottom-text {
             font-size: 14px;
             margin-right: 8px;
+            .faded {
+                opacity: 0.5;
+            }
         }
 
         .icon-wrapper {
