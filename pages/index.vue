@@ -176,6 +176,11 @@ useSeoMeta({
   ogDescription: 'Discover the profound beauty of embracing your brilliance amidst the vast cosmos. Explore the poetic journey of our fleeting existence, drawing inspiration from blooming flowers and the infinite universe.'
 })
 
+defineOgImageScreenshot({
+ selector: '.wrapper',
+ mask: '.bottom-info'
+})
+
 onMounted(() => {
     window.addEventListener('scroll', updateBackgroundImage)
     scrollingElement.value = document.querySelector('#__nuxt')
