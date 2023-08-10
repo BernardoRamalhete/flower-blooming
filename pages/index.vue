@@ -134,6 +134,7 @@
         </main>
 
         <button class="mute-button" @click="toggleMusic">
+            <span class="visually-hidden">{{ audioPlaying ? 'Pause' : 'Play' }} music</span>
             <Icon v-if="audioPlaying" name="ph:pause-light"/>
             <Icon v-else  name="ph:play-light"/>
         </button>
