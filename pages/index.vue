@@ -515,6 +515,15 @@ function handleMouseMove(event) {
             opacity: 0;
             user-select: none;
         }
+
+        @media(max-width: 780px) {
+            bottom: unset;
+            top: 32px;
+        }
+
+        @media(max-width: 420px) {
+            font-size: 18px;
+        }
     }
 
     .bottom-info {
