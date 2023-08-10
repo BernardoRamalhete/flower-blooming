@@ -139,6 +139,10 @@
             <Icon v-else  name="ph:play-light"/>
         </button>
 
+        <p class="sound-warning" :class="{ hidden: hasStartScrolling }">
+            Better experienced with sound on
+        </p>
+
         <div class="bottom-info">
             <span class="bottom-text">
                 <span v-if="hasStartScrolling">
@@ -212,8 +216,6 @@ const readCompletionFill = ref(62.5)
 
 const scrollingElement = ref(null)
 function updateBackgroundImage() {
-    
-    audio.value.play()
     hasStartScrolling.value = window.pageYOffset > 0
     const scrollPercentage = Math.floor(100 * document.documentElement.scrollTop / (scrollingElement.value.scrollHeight - document.documentElement.clientHeight))
 
@@ -440,8 +442,24 @@ function toggleMusic() {
         place-items: center;
         opacity: 0.6;
         transition: all 0.2s ease;
+        z-index: 1;
         &:hover {
             opacity: 1;
+        }
+    }
+
+    .sound-warning {
+        position: fixed;
+        bottom: 48px;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        color: $text_color;
+        opacity: 0.4;
+        transition: all 0.4s ease;
+        &.hidden {
+            opacity: 0;
+            user-select: none;
         }
     }
 
