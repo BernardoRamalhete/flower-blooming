@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper" @scroll="handleScroll">
+        <span class="cursor"/>
         <div class="background-image">
             <figure class="figure">
                 <img class="image" :src="`/images/${currentImage}`" alt=""/>
@@ -195,12 +196,14 @@ defineOgImageScreenshot({
 
 onMounted(() => {
     window.addEventListener('scroll', updateBackgroundImage)
+    window.addEventListener('mousemove', handleMouseMove)
     scrollingElement.value = document.querySelector('#__nuxt')
     audio.value = new Audio(backgroundMusic)
 })
 
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', updateBackgroundImage)
+    window.removeEventListener('mousemove', handleMouseMove)
 })
 
 const audio = ref(null)
@@ -245,11 +248,34 @@ function toggleMusic() {
     audioPlaying.value = true
     audio.value.play()
 }
+
+const mouseXPosition = ref(0)
+const mouseYPosition = ref(0)
+function handleMouseMove(event) {
+    mouseXPosition.value = event.clientX + 'px';
+    mouseYPosition.value = event.clientY + 'px';
+}
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
     padding-bottom: 200px;
+    cursor: none;
+    button {
+        cursor: none;
+    }
+
+    .cursor {
+        width: 12px;
+        aspect-ratio: 1;
+        background-color: rgba($text_color, 0.4);
+        backdrop-filter: opacity(100%);
+        z-index: 1;
+        border-radius: 50%;
+        position: fixed;
+        left: v-bind(mouseXPosition);
+        top: v-bind(mouseYPosition);
+    }
     .background-image {
         position: fixed;
         inset: 0;
@@ -338,6 +364,7 @@ function toggleMusic() {
         background-repeat: no-repeat;
         background-position: center;
         filter: grayscale(100%);
+        user-select: none;
         @media(max-width: 420px) {
             padding: 12px 32px;
         }
