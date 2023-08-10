@@ -133,6 +133,11 @@
             </p>
         </main>
 
+        <button class="mute-button" @click="toggleMusic">
+            <Icon v-if="audioPlaying" name="ph:pause-light"/>
+            <Icon v-else  name="ph:play-light"/>
+        </button>
+
         <div class="bottom-info">
             <span class="bottom-text">
                 <span v-if="hasStartScrolling">
@@ -159,6 +164,8 @@
 </template>
 
 <script setup>
+import backgroundMusic from '@/assets/audio/backgroundMusic.mp3'
+
 useHead({
     title: 'Bloom brightly in the Infinite Cosmos',
     meta: [
@@ -184,11 +191,14 @@ defineOgImageScreenshot({
 onMounted(() => {
     window.addEventListener('scroll', updateBackgroundImage)
     scrollingElement.value = document.querySelector('#__nuxt')
+    audio.value = new Audio(backgroundMusic)
 })
 
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', updateBackgroundImage)
 })
+
+const audio = ref(null)
 
 const hasStartScrolling = ref(false) 
 
@@ -201,6 +211,8 @@ const readCompletionFill = ref(62.5)
 
 const scrollingElement = ref(null)
 function updateBackgroundImage() {
+    
+    audio.value.play()
     hasStartScrolling.value = window.pageYOffset > 0
     const scrollPercentage = Math.floor(100 * document.documentElement.scrollTop / (scrollingElement.value.scrollHeight - document.documentElement.clientHeight))
 
@@ -217,6 +229,18 @@ function updateBackgroundImage() {
     currentImageIndex.value = relativeScrollPosition
 
     readCompletionFill.value = (0.63 * scrollPercentage) - 63
+}
+
+const audioPlaying = ref(false)
+
+function toggleMusic() {
+    if(audioPlaying.value) {
+        audioPlaying.value = false
+        audio.value.pause()
+        return
+    }
+    audioPlaying.value = true
+    audio.value.play()
 }
 </script>
 
@@ -398,6 +422,25 @@ function updateBackgroundImage() {
                     }
                 }
             }
+        }
+    }
+
+    .mute-button {
+        position: fixed;
+        bottom: 32px;
+        left: 32px;
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid rgba($pure_white, 0.4);
+        color: $text_color;
+        padding: 8px;
+        font-size: 28px;
+        display: grid;
+        place-items: center;
+        opacity: 0.6;
+        transition: all 0.2s ease;
+        &:hover {
+            opacity: 1;
         }
     }
 
