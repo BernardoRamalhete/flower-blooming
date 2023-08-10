@@ -260,12 +260,15 @@ function handleMouseMove(event) {
 <style lang="scss" scoped>
 .wrapper {
     padding-bottom: 200px;
-    cursor: none;
-    button {
+    @media (pointer: fine) {
         cursor: none;
+        button {
+            cursor: none;
+        }
     }
 
     .cursor {
+        display: none;
         width: 12px;
         aspect-ratio: 1;
         background-color: rgba($text_color, 0.4);
@@ -275,6 +278,16 @@ function handleMouseMove(event) {
         position: fixed;
         left: v-bind(mouseXPosition);
         top: v-bind(mouseYPosition);
+        @media (pointer: fine) {
+            display: block;
+        }
+        
+        @media(max-width: 420px) {
+            font-size: 16px;
+            &:nth-child(odd), &:nth-child(even) {
+                max-width: 100%;
+            }
+        }
     }
     .background-image {
         position: fixed;
@@ -413,9 +426,6 @@ function handleMouseMove(event) {
 
         p {
             font-size: 36px;
-            @media(max-width: 420px) {
-                font-size: 16px;
-            }
 
             &:nth-child(odd) {
                 max-width: 880px;
@@ -427,6 +437,13 @@ function handleMouseMove(event) {
                 margin-left: auto;
                 max-width: 880px;
                 margin-bottom: 120px;
+            }
+
+            @media(max-width: 420px) {
+                font-size: 16px;
+                &:nth-child(odd), &:nth-child(even) {
+                    max-width: 100%;
+                }
             }
 
             &.quote {
