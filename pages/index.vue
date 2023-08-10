@@ -222,7 +222,6 @@ function updateBackgroundImage() {
 
 <style lang="scss" scoped>
 .wrapper {
-    // height: 10000px;
     padding-bottom: 200px;
     .background-image {
         position: fixed;
@@ -302,29 +301,22 @@ function updateBackgroundImage() {
         color: $text_color;
         z-index: 2;
         position: relative;
+        max-width: 1440px;
+        margin-inline: auto;
+        width: 100%;
+        height: 40%;
+        background-clip: text;
+        background-image: linear-gradient(transparent, $text_color, $text_color, $text_color, transparent);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(100%);
         @media(max-width: 420px) {
-            margin: 12px 20px;
+            padding: 12px 32px;
         }
 
-        &:before, &:after {
-            content: '';
-            position: fixed;
-            margin-inline: -108px;
-            bottom: 0;
-            width: 100%;
-            height: 40%;
-            background-image: linear-gradient(0deg, $pure_black, 50%, transparent);
-            filter: grayscale(100%);
-            
-            @media(max-width: 420px) {
-                margin-inline: -20px;
-            }
-        }
-        
-        &:after {
-            bottom: unset;
-            top: 0;
-            background-image: linear-gradient(180deg, $pure_black, 50%, transparent);
+        * {
+            color: transparent;
         }
 
         h1 {
