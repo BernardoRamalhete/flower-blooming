@@ -379,7 +379,7 @@ function handleMouseMove(event) {
         filter: grayscale(100%);
         user-select: none;
         @media(max-width: 420px) {
-            padding: 12px 32px;
+            padding: 12px 20px;
         }
 
         * {
@@ -442,7 +442,10 @@ function handleMouseMove(event) {
             @media(max-width: 420px) {
                 font-size: 16px;
                 &:nth-child(odd), &:nth-child(even) {
-                    max-width: 100%;
+                    text-wrap: balance;
+                    max-width: 80%;
+                    margin-bottom: 80px;
+                    line-height: 1.6;
                 }
             }
 
