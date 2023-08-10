@@ -195,14 +195,14 @@ defineOgImageScreenshot({
 })
 
 onMounted(() => {
-    window.addEventListener('scroll', updateBackgroundImage)
+    window.addEventListener('scroll', handleScroll)
     window.addEventListener('mousemove', handleMouseMove)
     scrollingElement.value = document.querySelector('#__nuxt')
     audio.value = new Audio(backgroundMusic)
 })
 
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', updateBackgroundImage)
+    window.removeEventListener('scroll', handleScroll)
     window.removeEventListener('mousemove', handleMouseMove)
 })
 
@@ -218,10 +218,15 @@ const currentImageIndex = ref('001')
 const readCompletionFill = ref(62.5)
 
 const scrollingElement = ref(null)
-function updateBackgroundImage() {
+function handleScroll() {
     hasStartScrolling.value = window.pageYOffset > 0
     const scrollPercentage = Math.floor(100 * document.documentElement.scrollTop / (scrollingElement.value.scrollHeight - document.documentElement.clientHeight))
 
+    updateBackgroundImage(scrollPercentage)
+    updateReadCompletionFill(scrollPercentage)
+}
+
+function updateBackgroundImage(scrollPercentage) {
     let relativeScrollPosition = Math.ceil(100 * scrollPercentage / 136) + 1
     
     if(relativeScrollPosition > 136) {
@@ -233,7 +238,9 @@ function updateBackgroundImage() {
     while(relativeScrollPosition.length < 3) relativeScrollPosition = '0' + relativeScrollPosition
 
     currentImageIndex.value = relativeScrollPosition
+}
 
+function updateReadCompletionFill(scrollPercentage) {
     readCompletionFill.value = (0.63 * scrollPercentage) - 63
 }
 
