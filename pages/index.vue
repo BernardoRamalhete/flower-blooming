@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" @scroll="handleScroll">
+    <div class="wrapper">
         <span class="cursor"/>
         <div class="background-image">
             <figure class="figure">
@@ -207,13 +207,14 @@ onMounted(() => {
         loadImage(src)
     }
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('touchmove', handleTouchMove)
     window.addEventListener('mousemove', handleMouseMove)
     scrollingElement.value = document.querySelector('#__nuxt')
     audio.value = new Audio(backgroundMusic)
 })
-
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('touchmove', handleTouchMove)
     window.removeEventListener('mousemove', handleMouseMove)
 })
 
@@ -229,6 +230,12 @@ const currentImageIndex = ref('001')
 const readCompletionFill = ref(62.5)
 
 const scrollingElement = ref(null)
+
+function handleTouchMove(event) {
+    event.preventDefault()
+
+    handleScroll()
+}
 function handleScroll() {
     hasStartScrolling.value = window.pageYOffset > 0
     const scrollPercentage = Math.floor(100 * document.documentElement.scrollTop / (scrollingElement.value.scrollHeight - document.documentElement.clientHeight))
