@@ -196,10 +196,7 @@ defineOgImageScreenshot({
 })
 
 const loadImage = useLoadImage()
-
-const screenHeight = ref('100vh')
 onMounted(() => {
-    screenHeight.value = `${window.innerHeight}px`
     for(let i = 1; i < 137; i++) {
         let formattedNumber = String(i)
         while(formattedNumber.length < 3) {
@@ -212,7 +209,6 @@ onMounted(() => {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('touchmove', handleTouchMove)
     window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('resize', handleResize)
     scrollingElement.value = document.querySelector('#__nuxt')
     audio.value = new Audio(backgroundMusic)
 })
@@ -264,10 +260,6 @@ function updateBackgroundImage(scrollPercentage) {
 
 function updateReadCompletionFill(scrollPercentage) {
     readCompletionFill.value = (0.63 * scrollPercentage) - 63
-}
-
-function handleResize() {
-    screenHeight.value = `${window.innerHeight}px`
 }
 
 const audioPlaying = ref(false)
@@ -342,7 +334,7 @@ function handleMouseMove(event) {
             right: -50%;
             bottom: -50%;
             width: 200%;
-            height: calc(v-bind(screenHeight) * 2);
+            height: 200vh;
             background: transparent url('/images/background-noise.png') repeat 0 0;
             background-repeat: repeat;
             animation: bg-animation .2s infinite;
@@ -420,7 +412,8 @@ function handleMouseMove(event) {
         }
 
         h1 {
-            height: v-bind(screenHeight);
+            height: 100vh;
+            height: 100dvh;
             text-align: center;
             display: grid;
             place-items: center;
@@ -435,7 +428,8 @@ function handleMouseMove(event) {
         }
 
         & > span {
-            height: calc(v-bind(screenHeight) + 5);
+            height: 105vh;
+            height: 105dvh;
             display: block;
         }
         
@@ -447,7 +441,8 @@ function handleMouseMove(event) {
             max-width: unset !important;
             font-weight: 500;
             font-size: 40px !important;
-            height: v-bind(screenHeight);
+            height: 100vh;
+            height: 100dvh;
             margin-bottom: 0 !important;
             @media(max-width: 420px) {
                 font-size: 20px !important;
@@ -481,7 +476,8 @@ function handleMouseMove(event) {
 
             &.quote {
                 margin: auto;
-                height: calc(v-bind(screenHeight) + 6);
+                height: 105vh;
+                height: 105dvh;
                 font-weight: 500;
                 font-size: 48px;
                 text-align: center;
