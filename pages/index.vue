@@ -171,6 +171,7 @@
 
 <script setup>
 import backgroundMusic from '@/assets/audio/backgroundMusic.mp3'
+import { useLoadImage } from '../composables/useLoadImage'
 
 useHead({
     title: 'Bloom brightly in the Infinite Cosmos',
@@ -194,7 +195,17 @@ defineOgImageScreenshot({
  mask: '.bottom-info'
 })
 
+const loadImage = useLoadImage()
 onMounted(() => {
+    for(let i = 1; i < 137; i++) {
+        let formattedNumber = String(i)
+        while(formattedNumber.length < 3) {
+            formattedNumber = `0${formattedNumber}`
+        }
+        
+        const src = `/images/ezgif-frame-${formattedNumber}.jpg`
+        loadImage(src)
+    }
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('mousemove', handleMouseMove)
     scrollingElement.value = document.querySelector('#__nuxt')
